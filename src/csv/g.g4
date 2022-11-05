@@ -11,6 +11,6 @@ field
     |STRING
     ;
 SEPARADOR:[|;,];
-TEXTO   : ~[|;,\n\r"]+ ;
-STRING : '"' ('""'|~'"')* '"' ;
+TEXTO: ~[|;,\n\r"]+ ;
+STRING: '"' ('""'|~'"')* '"' ;
 

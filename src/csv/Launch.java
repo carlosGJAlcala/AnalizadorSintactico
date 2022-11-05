@@ -1,3 +1,5 @@
+package csv;
+
 import org.antlr.v4.runtime.CharStream;
 import org.antlr.v4.runtime.CommonTokenStream;
 import org.antlr.v4.runtime.tree.ParseTree;
@@ -9,7 +11,7 @@ public class Launch {
     public static void main(String[] args) {
 
         try {
-            String source = "test.txt";
+            String source = "./src/FicherosPrueba/CSV_02.txt";
             CharStream cs = fromFileName(source);
             gLexer Lexer = new gLexer(cs);
             CommonTokenStream token = new CommonTokenStream(Lexer);
