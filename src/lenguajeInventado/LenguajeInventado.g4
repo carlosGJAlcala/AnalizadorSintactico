@@ -9,7 +9,7 @@ campo:asignacion
     |exprcond
     |mostrar
     ;
-asignacion: VARIABLE ':=' expr FINLINEA NEWLINE;
+asignacion: VARIABLE '=' expr FINLINEA NEWLINE;
 
 
 expr: expr('*'|'/')expr
@@ -57,5 +57,5 @@ FINCOND:'terminar' NEWLINE;
 //MOSTRARVALORES
 MOSTRAR:'mostrar'VALORES FINLINEA NEWLINE;
 COSAS:.+?;
-ESPACIO:' '+->skip;
+
 VALORES:NUMERO|STRING|FLOAT|VARIABLE;
