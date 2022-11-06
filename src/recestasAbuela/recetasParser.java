@@ -230,8 +230,10 @@ public class recetasParser extends Parser {
 	}
 
 	public static class RecetaContext extends ParserRuleContext {
+		public Token ingredientes;
+		public Token utensilios;
+		public Token cubiertos;
 		public TerminalNode ACCIONES() { return getToken(recetasParser.ACCIONES, 0); }
-		public TerminalNode INGREDIENTES() { return getToken(recetasParser.INGREDIENTES, 0); }
 		public List<TerminalNode> PREPOSICIONES() { return getTokens(recetasParser.PREPOSICIONES); }
 		public TerminalNode PREPOSICIONES(int i) {
 			return getToken(recetasParser.PREPOSICIONES, i);
@@ -240,11 +242,12 @@ public class recetasParser extends Parser {
 		public TerminalNode DETERMINANTES(int i) {
 			return getToken(recetasParser.DETERMINANTES, i);
 		}
-		public TerminalNode UTENSILIOS() { return getToken(recetasParser.UTENSILIOS, 0); }
 		public TerminalNode CANTIDAD() { return getToken(recetasParser.CANTIDAD, 0); }
 		public TerminalNode UNIDADES() { return getToken(recetasParser.UNIDADES, 0); }
-		public TerminalNode CUBIERTOS() { return getToken(recetasParser.CUBIERTOS, 0); }
+		public TerminalNode INGREDIENTES() { return getToken(recetasParser.INGREDIENTES, 0); }
+		public TerminalNode UTENSILIOS() { return getToken(recetasParser.UTENSILIOS, 0); }
 		public TerminalNode TIEMPO() { return getToken(recetasParser.TIEMPO, 0); }
+		public TerminalNode CUBIERTOS() { return getToken(recetasParser.CUBIERTOS, 0); }
 		public RecetaContext(ParserRuleContext parent, int invokingState) {
 			super(parent, invokingState);
 		}
@@ -297,14 +300,18 @@ public class recetasParser extends Parser {
 				}
 			}
 
+			{
 			setState(33);
-			match(INGREDIENTES);
+			((RecetaContext)_localctx).ingredientes = match(INGREDIENTES);
+			}
 			setState(34);
 			match(PREPOSICIONES);
 			setState(35);
 			match(DETERMINANTES);
+			{
 			setState(36);
-			match(UTENSILIOS);
+			((RecetaContext)_localctx).utensilios = match(UTENSILIOS);
+			}
 			setState(39);
 			_errHandler.sync(this);
 			switch ( getInterpreter().adaptivePredict(_input,4,_ctx) ) {
@@ -312,8 +319,10 @@ public class recetasParser extends Parser {
 				{
 				setState(37);
 				match(PREPOSICIONES);
+				{
 				setState(38);
-				match(CUBIERTOS);
+				((RecetaContext)_localctx).cubiertos = match(CUBIERTOS);
+				}
 				}
 				break;
 			}

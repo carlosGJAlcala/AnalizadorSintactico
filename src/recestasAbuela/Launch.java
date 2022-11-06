@@ -20,8 +20,19 @@ public class Launch {
             ParseTree tree = parser.prog();
 
             MyVisitor visitor = new MyVisitor();
+
             visitor.visit(tree);
+
             System.out.print(tree.toStringTree(parser));
+            RecetaTS ts= visitor.getTs();
+            //muestro todas las recetas
+            RecetaTS tsAnte=ts.getAnterior();
+            while(tsAnte!=null){
+                System.out.println(ts.toString());
+                ts=tsAnte;
+                tsAnte=ts.getAnterior();
+            }
+
         } catch (IOException e) {
             e.printStackTrace();
         }
