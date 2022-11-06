@@ -1,4 +1,4 @@
-// Generated from /Users/david/IdeaProjects/prueba2/src/lenguajeInventado/LenguajeInventado.g4 by ANTLR 4.10.1
+// Generated from C:/Users/carlo/OneDrive - Universidad de Alcala/3anyo/1cuatri/Compiladores/LABORATORIO/Pl2Compiladores/AnalizadorSintactico/src/lenguajeInventado\LenguajeInventado.g4 by ANTLR 4.10.1
 package lenguajeInventado;
 import org.antlr.v4.runtime.tree.ParseTreeVisitor;
 
@@ -70,4 +70,10 @@ public interface LenguajeInventadoVisitor<T> extends ParseTreeVisitor<T> {
 	 * @return the visitor result
 	 */
 	T visitMostrar(LenguajeInventadoParser.MostrarContext ctx);
+	/**
+	 * Visit a parse tree produced by {@link LenguajeInventadoParser#for}.
+	 * @param ctx the parse tree
+	 * @return the visitor result
+	 */
+	T visitFor(LenguajeInventadoParser.ForContext ctx);
 }

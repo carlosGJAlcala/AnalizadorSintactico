@@ -1,4 +1,4 @@
-// Generated from /Users/david/IdeaProjects/prueba2/src/lenguajeInventado/LenguajeInventado.g4 by ANTLR 4.10.1
+// Generated from C:/Users/carlo/OneDrive - Universidad de Alcala/3anyo/1cuatri/Compiladores/LABORATORIO/Pl2Compiladores/AnalizadorSintactico/src/lenguajeInventado\LenguajeInventado.g4 by ANTLR 4.10.1
 package lenguajeInventado;
 
 import org.antlr.v4.runtime.ParserRuleContext;
@@ -131,6 +131,18 @@ public class LenguajeInventadoBaseListener implements LenguajeInventadoListener 
 	 * <p>The default implementation does nothing.</p>
 	 */
 	@Override public void exitMostrar(LenguajeInventadoParser.MostrarContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void enterFor(LenguajeInventadoParser.ForContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void exitFor(LenguajeInventadoParser.ForContext ctx) { }
 
 	/**
 	 * {@inheritDoc}
