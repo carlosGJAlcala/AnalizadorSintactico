@@ -55,7 +55,7 @@ public class RecetaTS {
     @Override
     public String toString() {
         return "\nRecetaTS{" +
-                "cubierto='" + cubierto + '\'' +
+                "cubiertos='" + cubierto + '\'' +
                 ", utensilios='" + utensilio + '\'' +
                 ", ingredientes='" + ingrediente + '\'' +
 

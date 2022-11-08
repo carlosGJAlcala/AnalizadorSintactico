@@ -11,7 +11,7 @@ public class Launch {
     public static void main(String[] args) {
 
         try {
-            String source = "./src/FicherosPrueba/CSV_02.txt";
+            String source = "./src/FicherosPrueba/CSV_01.txt";
             CharStream cs = fromFileName(source);
             gLexer Lexer = new gLexer(cs);
             CommonTokenStream token = new CommonTokenStream(Lexer);

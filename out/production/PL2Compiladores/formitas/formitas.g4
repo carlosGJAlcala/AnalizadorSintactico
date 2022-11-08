@@ -7,17 +7,15 @@ fila : IMGDIM','SHPDIM APERTURA row('|'row)* CERRADURA;
 row : campo (SEPARADOR campo)* ;
 
 campo
-    :CUADRADO
-    |CIRCULO
-    |TRIANGULO
+    :FIGURA
     ;
 
+ESPACIO : (' ' | '\t')+  -> skip;
+NEWLINE: ('\r'? '\n' | '\r')+ -> skip;
 
+FIGURA:'circulo'|'triangulo'|'trapecio'|'trapezoide'|'cuadrado'|'Pentagono'|'Hexagono'|'heptagono'|'octogono'|'eneagono'|'decagono';
 APERTURA:'>>>';
 CERRADURA:'<<<';
-CUADRADO:'cuadrado';
-CIRCULO: 'circulo';
-TRIANGULO:'triangulo';
 IMGDIM:'imgdim:'NUMERO;
 SHPDIM:'shpdim:'NUMERO;
 SEPARADOR:',';
