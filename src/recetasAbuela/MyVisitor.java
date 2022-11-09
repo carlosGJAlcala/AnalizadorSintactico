@@ -1,4 +1,4 @@
-package recestasAbuela;
+package recetasAbuela;
 
 public class MyVisitor extends recetasBaseVisitor<Object> {
     RecetaTS ts,tsSig;

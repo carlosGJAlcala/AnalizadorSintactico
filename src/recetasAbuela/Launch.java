@@ -1,4 +1,4 @@
-package recestasAbuela;
+package recetasAbuela;
 
 
 import org.antlr.v4.runtime.CharStream;

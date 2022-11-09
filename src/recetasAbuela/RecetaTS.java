@@ -1,4 +1,4 @@
-package recestasAbuela;
+package recetasAbuela;
 
 public class RecetaTS {
     String cubierto,utensilio,ingrediente;
