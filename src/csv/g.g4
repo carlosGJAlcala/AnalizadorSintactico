@@ -1,16 +1,18 @@
 grammar g;
 
-csvFile: hdr row+ EOF ;
+csvFile: definition? hdr row+ EOF ;
 
 hdr : row ;
-
-row : field (SEPARADOR field)* '\r'? '\n' ;
+definition:LISTDEFINITION SEPARADOR')' NEWLINE ;
+row : field (SEPARADOR field)* NEWLINE ;
 
 field
     :TEXTO
     |STRING
     ;
-SEPARADOR:[|;,];
-TEXTO: ~[|;,\n\r"]+ ;
+NEWLINE: ('\r'? '\n' | '\r')+ ;
+LISTDEFINITION:'List-Definition(';
+SEPARADOR:[|;,<>$%&];
+TEXTO: ~[|;,\n\r<>$%&"]+ ;
 STRING: '"' ('""'|~'"')* '"' ;
 

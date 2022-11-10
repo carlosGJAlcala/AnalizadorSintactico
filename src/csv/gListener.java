@@ -1,4 +1,5 @@
-package csv;// Generated from C:/Users/carlo/OneDrive - Universidad de Alcala/3anyo/1cuatri/Compiladores/LABORATORIO/Pl2Compiladores/PL2Compiladores\g.g4 by ANTLR 4.10.1
+// Generated from C:/Users/carlo/OneDrive - Universidad de Alcala/3anyo/1cuatri/Compiladores/LABORATORIO/Pl2Compiladoresfinal/AnalizadorSintactico/src/csv\g.g4 by ANTLR 4.10.1
+package csv;
 import org.antlr.v4.runtime.tree.ParseTreeListener;
 
 /**
@@ -26,6 +27,16 @@ public interface gListener extends ParseTreeListener {
 	 * @param ctx the parse tree
 	 */
 	void exitHdr(gParser.HdrContext ctx);
+	/**
+	 * Enter a parse tree produced by {@link gParser#definition}.
+	 * @param ctx the parse tree
+	 */
+	void enterDefinition(gParser.DefinitionContext ctx);
+	/**
+	 * Exit a parse tree produced by {@link gParser#definition}.
+	 * @param ctx the parse tree
+	 */
+	void exitDefinition(gParser.DefinitionContext ctx);
 	/**
 	 * Enter a parse tree produced by {@link gParser#row}.
 	 * @param ctx the parse tree
