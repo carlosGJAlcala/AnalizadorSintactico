@@ -7,10 +7,11 @@ fila : IMGDIM','SHPDIM APERTURA row('|'row)* CERRADURA;
 row : campo (SEPARADOR campo)* ;
 
 campo
-    :FIGURA('-'COLORES)?
+    :FIGURA(CONTRASTE)?(TAMANIO)?
     ;
 
-COLORES:'R'|'G'|'B';
+CONTRASTE:'(contraste:'[01][0-9][0-9]'%)';
+TAMANIO:'(tamanio:'[0-9]?[0-9]?[0-9]('px)'|'em)');
 ESPACIO : (' ' | '\t')+  -> skip;
 NEWLINE: ('\r'? '\n' | '\r')+ -> skip;
 
